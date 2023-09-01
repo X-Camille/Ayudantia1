@@ -1,46 +1,55 @@
 package org.example;
 
 public class Ayundatia1 {
-    public static boolean metodo1(String palabraIngresada) {
-        palabraIngresada = palabraIngresada.replace(" ", "a");
+    public static void main(String[] args) {
+        System.out.println(esPalindromo("oso"));
+        int[][] matriz = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+        System.out.println(obtenerMatrizTranspuesta(matriz));
+    }
+
+    public static boolean esPalindromo(String palabraIngresada) {
+        palabraIngresada = palabraIngresada.replace(" ", "");
         StringBuilder stringBuilder = new StringBuilder(palabraIngresada);
         String palabraInvertida = stringBuilder.reverse().toString();
         return palabraIngresada.equalsIgnoreCase(palabraInvertida);
     }
 
-    public static double metodo2(double [] notas) {
+    public static double calcularPromedio(double [] notas) {
         double [] ponderacionNotas = {0.25, 0.25, 0.25, 0.15, 0.10};
         double promedio = 0;
         for (int i = 0; i < notas.length; i++) {
-            promedio = (notas[i] * ponderacionNotas[i]);
+            promedio += (notas[i] * ponderacionNotas[i]); // Falta un += para que se vaya acumulando el promedio
         }
         return promedio;
     }
 
-    private static String metodo3(int [] puntajes) {
+    public static String decidirGanador(int [] puntajes) {
         int jugador1 = 20 - puntajes[0];
         int jugador2 = 20 - puntajes[1];
         if((jugador1 < 0 && jugador2 < 0) || jugador1 == jugador2) {
             return "Empate.";
-        } else if((jugador1 < 0 || jugador2 < jugador1) && jugador2 >= 0) {
+        } else if((jugador1 < 0 || jugador2 > jugador1) && jugador2 >= 0) { // Se cambió el < por un >
             return "Jugador 2 ganó.";
         } else {
             return "Jugador 1 ganó.";
         }
     }
 
-    public static int[][] metodo4(int[][] a) {
-        int[][] t = new int[a[0].length][a.length];
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[i].length; j++) {
-                t[j][i] = a[i][j];
+    public static int[][] obtenerMatrizTranspuesta(int[][] matriz) {
+        int[][] transpuesta = new int[matriz[0].length][matriz.length];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                transpuesta[j][i] = matriz[i][j];
             }
         }
-        return t;
+        return transpuesta;
     }
 
-    public static boolean metodo5(String palabraIngresada) {
-        for (int i = 0; i <= palabraIngresada.length(); i++) {
+    public static boolean validarCadena(String palabraIngresada) {
+        for (int i = 0; i < palabraIngresada.length(); i++) { // Se le quitó el signo =
             if (Character.isDigit(palabraIngresada.charAt(i)) ||
                     palabraIngresada.isBlank()) {
                 return false;
@@ -48,4 +57,6 @@ public class Ayundatia1 {
         }
         return true;
     }
+
+
 }
