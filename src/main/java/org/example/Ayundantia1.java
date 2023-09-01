@@ -1,6 +1,6 @@
 package org.example;
 
-public class Ayundatia1 {
+public class Ayundantia1 {
     public static void main(String[] args) {
         System.out.println(esPalindromo("oso"));
         int[][] matriz = {
