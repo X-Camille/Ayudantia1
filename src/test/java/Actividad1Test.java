@@ -1,8 +1,8 @@
-import org.example.Ayundantia1;
+import org.example.Actividad1;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Ayundantia1Test {
+public class Actividad1Test {
     private Boolean [] resultadosPalabrasEsperadas;
     private String [] palabras;
     private double [] notas;
@@ -55,7 +55,7 @@ public class Ayundantia1Test {
     public void esPalindromoTest() {
         boolean resultadoCorrecto = true;
         for (int i=0; i < palabras.length; i++) {
-            if (Ayundantia1.esPalindromo(palabras[i]) != resultadosPalabrasEsperadas[i]) {
+            if (Actividad1.esPalindromo(palabras[i]) != resultadosPalabrasEsperadas[i]) {
                 resultadoCorrecto = false;
                 break;
             }
@@ -66,7 +66,7 @@ public class Ayundantia1Test {
     @Test
     public void calcularPromedioTest(){
         double promedioEsperado = 4.645;
-        double promedioCalculado = Ayundantia1.calcularPromedio(notas);
+        double promedioCalculado = Actividad1.calcularPromedio(notas);
         assertEquals(promedioEsperado, promedioCalculado);
     }
 
@@ -75,7 +75,7 @@ public class Ayundantia1Test {
         boolean ganadorCorrecto = true;
         for (int i = 0; i < puntajes.length; i++) {
             int[] puntajeActual = puntajes[i];
-            String resultadoObtenido = Ayundantia1.decidirGanador(puntajeActual);
+            String resultadoObtenido = Actividad1.decidirGanador(puntajeActual);
             if (resultadoObtenido != ganadorEsperado[i]) {
                 ganadorCorrecto = false;
                 break;
@@ -87,7 +87,7 @@ public class Ayundantia1Test {
     @Test
     public void obtenerMatrizTranspuestaTest(){
         boolean transpuestaCorrecta = true;
-        int[][] transpuestaObtenida = Ayundantia1.obtenerMatrizTranspuesta(matriz);
+        int[][] transpuestaObtenida = Actividad1.obtenerMatrizTranspuesta(matriz);
         for (int i = 0; i < transpuestaObtenida.length; i++) {
             for (int j = 0; j < transpuestaObtenida[i].length; j++) {
                 if (transpuestaObtenida[i][j] != transpuestEsperada[i][j]) {
@@ -103,7 +103,7 @@ public class Ayundantia1Test {
     public void validarCadenaTest(){
         boolean validacionCorrecta = true;
         for(int i=0; i < cadenas.length; i++) {
-            if(Ayundantia1.validarCadena(cadenas[i]) != resultadosCadenasEsperadas[i]) {
+            if(Actividad1.validarCadena(cadenas[i]) != resultadosCadenasEsperadas[i]) {
                 validacionCorrecta = false;
                 break;
             }
