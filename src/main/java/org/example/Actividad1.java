@@ -1,14 +1,6 @@
 package org.example;
 
 public class Actividad1 {
-    public static void main(String[] args) {
-        System.out.println(esPalindromo("oso"));
-        int[][] matriz = {
-                {1, 2, 3},
-                {4, 5, 6}
-        };
-        System.out.println(obtenerMatrizTranspuesta(matriz));
-    }
 
     public static boolean esPalindromo(String palabraIngresada) {
         palabraIngresada = palabraIngresada.replace(" ", "");
@@ -31,7 +23,7 @@ public class Actividad1 {
         int jugador2 = 20 - puntajes[1];
         if((jugador1 < 0 && jugador2 < 0) || jugador1 == jugador2) {
             return "Empate.";
-        } else if((jugador1 < 0 || jugador2 > jugador1) && jugador2 >= 0) { // Se cambió el < por un >
+        } else if(jugador1 < 0 || jugador2 > jugador1) { // Se cambió el < por un >, y se eliminó el jugador2 > 0, ya que esto nunca pasará (else if)
             return "Jugador 2 ganó.";
         } else {
             return "Jugador 1 ganó.";
@@ -57,6 +49,5 @@ public class Actividad1 {
         }
         return true;
     }
-
 
 }

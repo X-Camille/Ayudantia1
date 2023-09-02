@@ -3,10 +3,10 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Actividad2Test {
-    double[][] temperaturas;
-    double[] datosCalurososEsperados;
-    double[] datosFriosEsperados;
-    double promedioEsperado;
+    private double[][] temperaturas;
+    private double[] datosCalurososEsperados;
+    private double[] datosFriosEsperados;
+    private double promedioEsperado;
 
     @BeforeEach
     public void init(){

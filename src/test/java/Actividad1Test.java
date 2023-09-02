@@ -6,8 +6,8 @@ public class Actividad1Test {
     private Boolean [] resultadosPalabrasEsperadas;
     private String [] palabras;
     private double [] notas;
-    private double promedioEsperado;
     private int[][] puntajes;
+    private double promedioEsperado;
     private String[] ganadorEsperado;
     private int[][] matriz;
     private int[][] transpuestEsperada;
@@ -24,7 +24,7 @@ public class Actividad1Test {
 
         // calcularPromedioTest
         notas = new double[]{4.0, 3.0, 5.6, 6.3, 5.5};
-        promedioEsperado = 4.645;
+        double promedioEsperado = 4.645;
 
         // decidirGanadorTest
          puntajes = new int[][]{
