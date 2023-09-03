@@ -48,6 +48,6 @@ public class Actividad2Test {
     @Test
     public void calcularPromedioTemperaturasTest(){
         double promedioObtenido = Actividad2.calcularPromedioTemperaturas(temperaturas);
-        assertEquals(promedioEsperado, promedioObtenido, 0.01);
+        assertEquals(promedioEsperado, promedioObtenido);
     }
 }
